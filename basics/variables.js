@@ -28,3 +28,7 @@ console.log(typeof netWorth , netWorth) //all characters inside netWorth string 
 console.log(typeof NaN)  // wow this is of type number great!
 netWorth = 23
 console.log(netWorth , "rupya")
+
+
+let zero = Boolean("haha")
+console.log(zero)
