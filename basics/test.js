@@ -1,1 +1,1 @@
-console.log("satyagya")
+console.log("Hello duniya")
