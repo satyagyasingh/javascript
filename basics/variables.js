@@ -25,6 +25,6 @@ netWorth = "23rp"
 netWorth = Number(netWorth) 
 
 console.log(typeof netWorth , netWorth) //all characters inside netWorth string are not numbers so value will NaN  (not a number)
-
+console.log(typeof NaN)  // wow this is of type number great!
 netWorth = 23
 console.log(netWorth , "rupya")
