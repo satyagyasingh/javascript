@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #121212; color: #f48d8d;">
+    <div id="parent">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+        <div>item 4</div>
+    </div>
+</body>
+<script>
+    const Alldiv = document.querySelectorAll('#parent>div');
+    //    const div = document.querySelectorAll('#parent');
+    //   const allDiv = Alldiv.children;
+
+    Alldiv.forEach((div) => {
+        // i want to console which div was clicked with the text inside it
+        div.onclick = function(){
+            console.log(` this was clicked :${div.textContent}`);
+        }
+    })
+    //here Alldiv is a html collection not an array so we can't use forEach on it
+    const parentEl = document.getElementById('parent');
+    console.log(parentEl.firstChild);
+    console.log(parentEl.firstElementChild);
+
+    
+    const child1 = Alldiv[0];
+    console.log(child1.nextElementSibling.innerText);
+    const parentOfChild1 = child1.parentElement;
+    if(parentOfChild1 === parentEl){
+        console.log('yes parent of child1 is parentEl');
+    }
+</script>
+</html>

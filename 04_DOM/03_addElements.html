@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #121212; color :rgb(239, 174, 174)">
+    
+</body>
+<script>
+    const body = document.body;
+    body.style.padding = '20px';
+
+    //creating elements
+    const div = document.createElement('div');
+    div.textContent = 'this is a div';
+    div.className = "main";
+    div.setAttribute('id', 'main');
+    
+    document.body.appendChild(div);
+
+    const ul = document.createElement('ul');
+    document.body.appendChild(ul);
+
+    const li1 = document.createElement('li');
+    li1.textContent = 'list 1';
+    ul.appendChild(li1);
+
+    const li2 = document.createElement('li');
+    li2.textContent = 'list 2';
+    ul.appendChild(li2);
+
+    const li3 = document.createElement('li');
+    li3.textContent = 'list 3';
+    ul.appendChild(li3);
+
+    //inserting elements
+    const h1El = document.createElement('h1');
+    h1El.textContent = 'heading';
+    document.body.insertBefore(h1El, div);
+
+    //removing elements
+    document.body.removeChild(div);
+
+    //replacing elements
+    const h4El = document.createElement('h4');
+    h4El.textContent = 'this is a new heading';
+    // document.body.replaceChild(h4El, h1El);
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg_dark{
+            background-color: #121212;
+            color: rgb(233, 190, 190);
+        }
+
+    </style>
+</head>
+<body class="bg_dark">
+    <div >
+        <h1 id="title">HI there this is heading</h1>
+    </div>
+    <div id="box">
+        this is content inside other div <span style="display: none;">And this is span</span>
+    </div>
+    <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+    </ul>
+</body>
+    <script>
+        document.getElementById('title').style.color = 'red';
+        document.querySelector('#box').style.backgroundColor = 'green';
+        const liEL = document.querySelectorAll("li")
+
+        //querySelectorAll return a NodeList ie not an array but we can use forEach on it
+        //eg
+        console.log(liEL);
+        liEL.forEach((li) => {
+            li.style.color = 'blue';
+        })
+    </script>
+</html>
